@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'pacificoFont'; 
+    src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype'),
+}
+
+
+@font-face {
+    font-family: 'mirageFont';
+    src: url('../assets/fonts/Mirage-Black.otf') format('opentype');
+    font-weight: 900; /* Peso para Black */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'mirageFont';
+    src: url('../assets/fonts/Mirage-Bold.otf') format('opentype');
+    font-weight: bold; /* O 700 para Bold */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'mirageFont';
+    src: url('../assets/fonts/Mirage-Medium.otf') format('opentype');
+    font-weight: 500; /* Peso para Medium */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'mirageFont';
+    src: url('../assets/fonts/Mirage-Regular.otf') format('opentype');
+    font-weight: normal; /* O 400 para Regular */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'mirageFont';
+    src: url('../assets/fonts/Mirage-Thin.otf') format('opentype');
+    font-weight: 100; /* Peso para Thin */
+    font-style: normal;
+    font-display: swap;
+}
+
+body   {
+    background-color: #578c90;
+    font-family: mirageFont, sans-serif;
+    font-weight: normal;
+}
+
+#logoText {
+    size: 50%;
+}
+
+#titulo {
+    font-family: pacificoFont;
+    font-size: 30px;
+    margin-bottom: 0px;
+    color: #dcd4cc;
+}
+
+.textos {
+    color: #ffffff;
+}
+
+#sec-portada {
+
+}
+
+#sec-cotizador {
+
+}
+
+#sec-costos {
+
+}
