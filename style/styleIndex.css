@@ -1,74 +1,135 @@
+/* --- TUS FUENTES ORIGINALES --- */
+/* Nota: Asegúrate de que la ruta a tus fuentes sea correcta desde la ubicación del CSS */
 @font-face {
     font-family: 'pacificoFont'; 
-    src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype'),
+    src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype');
 }
 
-
-@font-face {
-    font-family: 'mirageFont';
-    src: url('../assets/fonts/Mirage-Black.otf') format('opentype');
-    font-weight: 900; /* Peso para Black */
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'mirageFont';
-    src: url('../assets/fonts/Mirage-Bold.otf') format('opentype');
-    font-weight: bold; /* O 700 para Bold */
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'mirageFont';
-    src: url('../assets/fonts/Mirage-Medium.otf') format('opentype');
-    font-weight: 500; /* Peso para Medium */
-    font-style: normal;
-    font-display: swap;
-}
 @font-face {
     font-family: 'mirageFont';
     src: url('../assets/fonts/Mirage-Regular.otf') format('opentype');
-    font-weight: normal; /* O 400 para Regular */
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'mirageFont';
-    src: url('../assets/fonts/Mirage-Thin.otf') format('opentype');
-    font-weight: 100; /* Peso para Thin */
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-body   {
+/* --- ESTILOS GENERALES --- */
+body {
     background-color: #578c90;
     font-family: mirageFont, sans-serif;
     font-weight: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- SECCIÓN PORTADA --- */
+#sec-portada {
+    margin-bottom: 40px;
 }
 
 #logoText {
-    size: 50%;
+    max-width: 250px; /* Controla el tamaño del logo */
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 #titulo {
-    font-family: pacificoFont;
-    font-size: 30px;
-    margin-bottom: 0px;
+    font-family: pacificoFont, cursive;
+    font-size: 42px;
+    margin: 0;
     color: #dcd4cc;
 }
 
 .textos {
+    font-size: 1.1rem;
     color: #ffffff;
 }
 
-#sec-portada {
-
-}
-
+/* --- SECCIÓN COTIZADOR (FORMULARIO) --- */
 #sec-cotizador {
-
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
-#sec-costos {
+#cotizador-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
+#cotizador-form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+    font-family: mirageFont, sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    text-align: center;
+}
+
+#cotizador-form input:focus {
+    outline: none;
+    border-color: #dcd4cc;
+}
+
+#cotizador-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #dcd4cc;
+    color: #578c90;
+    border: none;
+    border-radius: 8px;
+    font-family: mirageFont, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cotizador-form button:hover {
+    background-color: #c9bfb6;
+}
+
+/* --- SECCIÓN COSTOS (RESULTADOS) --- */
+#sec-costos {
+    min-height: 100px; /* Espacio reservado para el resultado */
+}
+
+#resultado-final {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#resultado-final.hidden {
+    display: none;
+}
+
+#texto-resultado .precio-grande {
+    display: block;
+    font-size: 3rem;
+    margin-top: 10px;
+    color: #dcd4cc;
 }

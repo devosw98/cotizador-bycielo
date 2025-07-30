@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotizador By Cielo</title>
+    <!-- Enlace a tu hoja de estilos CSS -->
     <link rel="stylesheet" href="style/styleIndex.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
 
-    <section id="sec-portada">
-        <img id="logoText" src="assets/03-cielo-logo-texto.png" alt="Logo ByCielo">
-        <h1 id="titulo">Cotizador By Cielo</h1>
-        <p class="textos">Eleva tu estilo</p>
-    </section>
+    <main class="container">
+        <section id="sec-portada">
+            <!-- Te recomiendo usar una imagen con un tamaño más controlado o usar CSS para definirlo -->
+            <img id="logoText" src="assets/03-cielo-logo-texto.png" alt="Logo ByCielo">
+            <h1 id="titulo">Cotizador By Cielo</h1>
+            <p class="textos">Eleva tu estilo</p>
+        </section>
 
-    <section id="sec-cotizador">
+        <section id="sec-cotizador">
+            <!-- Formulario para ingresar el costo -->
+            <form id="cotizador-form">
+                <label for="precio-mxn">Costo de la prenda (MXN)</label>
+                <input type="number" id="precio-mxn" name="precio-mxn" placeholder="Ej: 250.00" step="0.01" min="0" required>
+                <button type="submit">Calcular Precio Final</button>
+            </form>
+        </section>
 
-    </section>
+        <section id="sec-costos">
+            <!-- Aquí se mostrará el resultado del cálculo -->
+            <div id="resultado-final" class="hidden">
+                <p id="texto-resultado"></p>
+            </div>
+        </section>
+    </main>
 
-    <section id="sec-costos">
-
-    </section>
-
+    <!-- Enlace a tu archivo JavaScript, justo antes de cerrar el body -->
+    <script src="js/script.js"></script>
 </body>
 </html>
