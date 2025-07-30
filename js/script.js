@@ -32,16 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Paso 2: Calcular la ganancia según el rango de precio
         let ganancia = 0;
-        if (costoProveedor <= 100) {
+        if (costoProveedor <= 70) {
             ganancia = 20;
-        } else if (costoProveedor >= 101 && costoProveedor <= 150) {
-            ganancia = 25;
-        } else if (costoProveedor >= 151 && costoProveedor <= 300) {
-            ganancia = 30;
-        } else if (costoProveedor >= 301 && costoProveedor <= 1000) {
-            ganancia = 50;
+        } else if (costoProveedor >= 71 && costoProveedor <= 200) {
+            ganancia = 40;
+        } else if (costoProveedor >= 201 && costoProveedor <= 450) {
+            ganancia = 55;
+        } else if (costoProveedor >= 451 && costoProveedor <= 1000) {
+            ganancia = 70;
         } else { // Si es 1001 o más
-            ganancia = 100;
+            ganancia = 120;
         }
 
         // Paso 3: Calcular el precio final y redondearlo al entero más cercano
